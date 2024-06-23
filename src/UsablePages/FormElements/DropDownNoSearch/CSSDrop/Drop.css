@@ -1,0 +1,64 @@
+.ui.selection.dropdown .menu>.item {
+    background-color: white;
+    border: none;
+    color:black;
+
+}
+.dark .ui.selection.dropdown .menu>.item {
+    background-color: var(--card-bg-dark);
+    border: none;
+    color: white;
+    
+}
+
+.ui.selection.dropdown .menu>.item:hover {
+    background-color: #EAECEF;
+    color: black;
+   
+}
+
+.ui.dropdown {
+    background-color: #ffffff;
+    font-size: 16px;
+    
+    /* Change this to your desired light mode background color */
+}
+
+.dark .ui.dropdown {
+    background-color: var(--card-bg-dark);
+    font-size: 16px;
+    
+    /* Change this to your desired dark mode background color */
+}.card_bg {
+    background-color: white;
+}
+
+.dark .card_bg {
+    background-color: var(--card-bg-dark);
+}
+.ui.selection.dropdown{
+    padding: .78571429em 2.1em .78571429em 1em;
+    
+}
+.ui.selection.dropdown>.delete.icon,
+.ui.selection.dropdown>.dropdown.icon,
+.ui.selection.dropdown>.search.icon{
+    padding: 1em;
+   
+}
+.ui.selection.dropdown .menu>.item .active{
+    background:linear-gradient(to right, #4b3bfa, #aaa3f6) ;
+}
+.ui.dropdown .menu>.item{
+    line-height: 0.7em;
+}
+.ui.selection.active.dropdown{
+    border-color:#685DD8 !important;
+}
+
+.ui.selection.active.dropdown .menu{
+    border-color: #685DD8 !important
+}
+.ui.selection.dropdown{
+border:1px solid #685DD8 !important;
+}

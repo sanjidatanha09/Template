@@ -1,0 +1,815 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --primary-color:#000;
+  --scoundery-color:rgb(93, 89, 108);
+  --primary-bg:#FFF;
+  --card-bg-dark: #2F3349;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .themeChanger {
+    @apply bg-[var(--primary-bg)];
+  }
+  .themeChanger h4 {
+    @apply text-[var(--scoundery-color)]
+  }
+  .themeChanger .button {
+    @apply text-[#8E85F3] bg-[#EAE8FD] p-2 py-1 rounded-sm my-3 dark:bg-[#3A3B64]
+  }
+  .themeChanger h5 {
+    @apply text-[var(--scoundery-color)]
+  }  
+}
+/* close button */
+
+.semiDark{
+  background: #2F3349;
+}
+.HideTextAnimation {
+  animation: HideTextAnimation 1s;
+}
+
+.NavberwidhtAnimationOpen {
+  animation: NavberwidhtAnimationOpen 1s;
+}
+
+
+
+.accordionOpen {
+  animation: accordionopen 2s;
+}
+
+.accordionClose {
+  animation: accordionclose .8s;
+}
+#dBoardSideber .active {
+  /* background: #7367F0;  */
+  background: -webkit-linear-gradient(left, #4b3bfa, #aaa3f6); 
+  background: -o-linear-gradient(right, #4b3bfa, #aaa3f6); 
+  background: -moz-linear-gradient(right, #4b3bfa, #aaa3f6);
+  background: linear-gradient(to right, #4b3bfa, #aaa3f6);
+  color: #FFF;
+  text-decoration: none;
+}
+#dBoardSideber .activeLink {
+  background: rgb(229 231 235);
+  border-radius: 4px;
+  color: black;
+  text-decoration: none;
+}
+
+/* #dBoardSideber::-webkit-scrollbar-thumb {
+  background-color: rgb(65, 65, 65, 0.2); 
+} */
+
+#dBoardSideber::-webkit-scrollbar {
+  width: 2px;
+}
+#dBoardSideber::-webkit-scrollbar-track {
+  display: none;
+}
+#dBoardSideber::-webkit-scrollbar-thumb {
+  background: rgb(255, 0, 0,0.0);
+}
+#dBoardSideber:hover::-webkit-scrollbar-thumb {
+  background: #28C76F;
+}
+
+#NotificationPopUp::-webkit-scrollbar {
+  display: none;
+}
+
+#NotificationPopUp {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+#themeChanger {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#NotificationPopUp .notification:hover .removeNotification {
+  display: block;
+}
+
+#contentScrollber::-webkit-scrollbar {
+  display: none;
+}
+
+#contentScrollber {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* sideber transition  */
+.transitionAnimationopen{
+  transition: .3s;
+}
+.transitionAnimationclose{
+  transition: .3s;
+}
+/* text editor css  */
+.darkThemeActivate .ql-toolbar {
+  background-color: #6B7280; 
+  border: none; 
+}
+.darkThemeActivate .ql-toolbar{
+  border: none !important;
+  border-radius: 4px 4px 0 0 ;
+}
+.darkThemeActivate .ql-container {
+  border-radius: 4px;
+  border: none !important;
+}
+.ql-container{
+  min-height: 200px;
+  
+}
+
+.darkThemeActivate .ql-toolbar .ql-picker-label {
+  color: #333; 
+}
+/* role table scrober  */
+#roletable::-webkit-scrollbar {
+  display: none;
+}
+.ThemeChangerOpen{
+animation: ThemeChangerOpen .3s;
+}
+.ThemeChangerClose{
+  animation: ThemeChangerClose .3s;
+}
+.ThemeChangerTogglerClose{
+animation: ThemeChangerTogglerClose 1s;
+}
+.ThemeChangerTogglerOpen{
+  animation: ThemeChangerTogglerOpen .3s;
+}
+/* animations  */
+/* accordionOpen animations */
+@keyframes ThemeChangerTogglerOpen {
+  from {
+    right: -50px;
+  }
+
+  to {
+    right: 12px;
+  }
+}
+@keyframes ThemeChangerTogglerClose {
+  from {
+    right: 12px;
+  }
+
+  to {
+    right: -50px;
+  }
+}
+@keyframes ThemeChangerOpen {
+  from {
+    right: -700px;
+  }
+
+  to {
+    right: 0px;
+  }
+}
+@keyframes ThemeChangerClose {
+  from {
+    right: 0px;
+  }
+
+  to {
+    right: -400px;
+  }
+}
+@keyframes accordionopen {
+  from {
+    max-height: 0px;
+  }
+
+  to {
+    max-height: 720px;
+  }
+}
+
+/* animations  */
+/* accordionClose animations */
+@keyframes accordionclose {
+  from {
+    max-height: 720px;
+  }
+
+  to {
+    max-height: 0px;
+  }
+}
+
+/* sidebre animations  */
+@keyframes SideberOpen {
+  from {
+    left: -600px;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes SideberClose {
+  from {
+    display: block;
+    left: 0;
+  }
+
+  to {
+    left: -600px;
+    display: none;
+  }
+}
+
+/* navber animation  */
+@keyframes NavberwidhtAnimationOpen {
+  from {
+    margin-left: 260px;
+  }
+
+  to {
+    margin-left: 80px;
+  }
+}
+
+@keyframes NavberwidhtAnimationClose {
+  from {
+    margin-left: -260px;
+  }
+
+  to {
+    margin-left: 1px;
+  }
+}
+
+@keyframes HideTextAnimation {
+  from {
+    width: 260px;
+  }
+
+  to {
+    width: 60px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .NavberwidhtAnimationClose {
+    animation: NavberwidhtAnimationClose .3s;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .SideberOpen {
+    animation: SideberOpen .3s;
+  }
+
+  .SideberClose {
+    animation: SideberClose 1s;
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ============================================= Base Style ================================================= */
+
+*{
+  font-family: "Public Sans", sans-serif;
+}
+
+/* ================= card header ================= */
+.card_header{
+  background-color: #DDDBFB;
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+  min-height: 45px;
+  padding: 0 12px;
+}
+.dark .card_header{
+  background-color: #3A3B64;
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+  height: 45px;
+}
+
+.header_footer_height{
+  height: 55px;
+}
+.top_header_bg{
+  background-color: #DDDBFB;
+}
+.dark .top_header_bg{
+  background-color: #3A3B64;
+}
+.footer_bg{
+  background-color: #DDDBFB;
+}
+.dark.footer_bg{
+  background-color: #3A3B64;
+}
+/* =================== border color ================= */
+.border_bg{
+  border-color: #685DD8;
+}
+.table_border_bg{
+  border-color: #685DD8;
+}
+.dark .border_bg{
+  border-color: #828282;
+}
+
+.icon_color{
+  color: #DDDBFB;
+}
+.dark .icon_color{
+  color: #3A3B64;
+}
+
+.text_field {
+  height: 45px;
+}
+.form_field{
+  height: 60px;
+}
+.button_hight{
+  height: 40px;
+}
+
+.text_white{
+  color:white;
+}
+.bg_primary{
+  background-color: #DDDBFB;
+}
+.bg_secondary{
+  background-color: #EAEBEC;
+}
+.bg_success{
+  background-color: #CBF2DC;
+}
+.bg_danger{
+  background-color: #FAD6D6;
+}
+.bg_warning{
+  background-color: #FFE8D2;
+}
+.bg_info{
+  background-color: #C2F3F9;
+}
+.bg_dark{
+  background-color: #D4D4D4;
+}
+.bg_primary_base {
+  background-color: #685DD8;
+}
+
+/* ================================ card ================================ */
+.card_bg{
+  background-color: white;
+}
+.dark .card_bg {
+  background-color: var(--card-bg-dark);
+}
+
+/* ========================Text Color =========================== */
+.text_color{
+  color: black;
+}
+.dark .text_color{
+  color: white;
+}
+.text_gray{
+  color:#00000088;
+}
+.text_primary {
+  color: #685DD8;
+}
+.text_success {
+  color: #28a745;
+}
+/* ======================== required text color =========================== */
+.required_text_color {
+  color: red;
+}
+.text_info {
+  color: #0D83DD;
+}
+
+/* ===================Status/Alerts================= */
+.bg_status_primary{
+  background-color: #DDDBFB;
+  font-size: 16px;
+  padding: 6px 12px;
+  color: #9D95F4;
+}
+.bg_status_secondary{
+  background-color: #EAEBEC;
+  font-size: 16px;
+  padding: 6px 12px;
+  color: #C0C2C5;
+}
+.bg_status_success{
+  background-color: #CBF2DC;
+  font-size: 16px;
+  padding: 6px 12px;
+  color: #28C76F;
+}
+.bg_status_danger{
+  background-color: #FAD6D6;
+  font-size: 16px;
+  padding: 6px 12px;
+  color: #EF7B7C;
+}
+.bg_status_warning{
+  background-color: #FFE8D2;
+  font-size: 16px;
+  padding: 6px 12px;
+  color: #FFA248;
+}
+.bg_status_info{
+  background-color: #C2F3F9;
+  font-size: 16px;
+  padding: 6px 12px;
+  color: #9DECF6;
+}
+.bg_dark{
+  background-color: #D4D4D4;
+  font-size: 16px;
+  padding: 6px 12px;
+  color: #616161;
+}
+/* ============Font Formate============== */
+.font_40px {
+  font-size: 40px;
+  font-family: "Public Sans", sans-serif;
+}
+.font_extra_large{
+  font-size: 30px;
+  font-family: "Public Sans", sans-serif;
+}
+.font_large{
+  font-size: 24px;
+  font-family: "Public Sans", sans-serif;
+}
+.font_medium{
+  font-size: 20px;
+  font-family: "Public Sans", sans-serif;
+}
+.font_title{
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+}
+.font_standard{
+  font-size: 16px;
+  font-family: "Public Sans", sans-serif;
+}
+.text_font {
+  font-size: 16px;
+  font-family: "Public Sans", sans-serif;
+}
+.font_small{
+  font-size: 14px;
+  font-family: "Public Sans", sans-serif;
+}
+.font_dark{
+  color: white;
+}
+/* =============Table Formate================ */
+.primary_bg{
+  background-color: #E9F3FE;
+  color: #9B93F4;
+  font-size: 16px;
+  padding: 6px 12px;
+}
+
+.table_header_bg{
+  background-color: #DDDBFB;
+}
+.dark .table_header_bg{
+  background-color: #3A3B64;
+}
+
+/* =========================== field Hight ======================== */
+.input_field_h{
+  height:45px;
+}
+
+/* ================Button================== */
+.btn_table{
+  background-color: #685DD8;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  height: 40px;
+  border: none;
+  transition: 0.3s all ease-in-out;
+}
+.btn_tableNormal {
+  padding: 10px 20px;
+  font-size: 16px;
+  height: 40px;
+  border: none;
+  transition: 0.3s all ease-in-out;
+}
+.btn_table:hover{
+  background-color: #524ab0;
+}
+
+.btn_primary{
+  background-color: #685DD8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  height: 40px;
+  border: none;
+  transition: 0.3s all ease-in-out;
+}
+.btn_primary:hover{
+  background-color: #524ab0;
+}
+.btn_secondary{
+  background-color: #97999D;
+  color: white;
+    padding: 10px 20px;
+    height: 40px;
+    border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s all ease-in-out;
+}
+.btn_secondary:hover{
+  background-color: #7c7e81;
+}
+.btn_success{
+  background-color: #24B364;
+  color: white;
+    padding: 10px 20px;
+    height: 40px;
+    border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s all ease-in-out;
+}
+.btn_success:hover{
+  background-color: #1e9353;
+}
+.btn_danger{
+  background-color: #D34C4D;
+  color: white;
+    padding: 10px 20px;
+    height: 40px;
+    border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s all ease-in-out;
+}
+.btn_danger:hover{
+  background-color: #b34141;
+}
+.btn_warning{
+  background-color: #E68F3C;
+  color: white;
+    padding: 10px 20px;
+    height: 40px;
+    border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s all ease-in-out;
+}
+.btn_warning:hover{
+  background-color: #c57a34;
+}
+.btn_info{
+  background-color: #00BAD1;
+  color: white;
+    padding: 10px 20px;
+    height: 40px;
+    border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s all ease-in-out;
+}
+.btn_info:hover{
+  background-color: #0194a7;
+}
+.btn_dark{
+  background-color: #444444;
+  color: white;
+    padding: 10px 20px;
+  border-radius: 6px;
+  height: 40px;
+  font-size: 16px;
+  transition: 0.3s all ease-in-out;
+}
+.btn_dark:hover{
+  background-color: #292929;
+}
+/* =====================animation=========================== */
+.scale-animation {
+  animation: scaleAnimation 1s;
+}
+.close-button {
+  background-color: transparent;
+  color: gray;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  font-weight: medium;
+}
+
+.close-button:hover {
+  color:red;
+}
+/* ============================== Sidebar  ================== */
+.text_color_sidebar {
+  background-color: #EAECEF;
+}
+
+.list_hover:hover{
+  background-color: #EAECEF;
+}
+
+/* ================= background color =========================== */
+
+
+
+/* ============================BreadCamp========================== */
+.ui.breadcrumb{
+  font-size: 22px !important;
+  color: #685DD8;
+  padding: 14px 0;
+}
+.dark .ui.breadcrumb{
+  font-size: 22px !important;
+  color: white;
+  padding: 16px 0;
+}
+.ui.breadcrumb a{
+  color: black !important;
+}
+.dark .ui.breadcrumb a{
+  color: white !important;
+}
+
+.dark i.icon{
+  color: white !important;
+}
+
+.p-checkbox-input{
+  border: 3px solid black !important;
+}
+/* ========================padding_top and bottom =========================== */
+.marginTop_40px {
+  margin-top: 40px;
+}
+.marginBottom_30px{
+  margin-bottom: 40px;
+}
+.marginBottom_4px {
+  margin-bottom: 4px;
+}
+.marginTop_4px {
+  margin-top: 4px;
+}
+.paddingTop_4px {
+  padding-top: 4px;
+}
+.paddingBottom_4px {
+  padding-bottom: 4px;
+}
+.padding_top {
+  padding-top: 14px;
+}
+
+.padding_bottom {
+  padding-bottom: 14px;
+}
+.margin_top {
+  margin-top: 14px;
+}
+
+.margin_bottom {
+  margin-bottom: 14px;
+}
+.padding_left {
+  padding-left: 14px;
+}
+
+.padding_right {
+  padding-right: 14px;
+}
+.margin_left {
+  margin-left: 14px;
+}
+
+.margin_right {
+  margin-right: 14px;
+}
+
+._margin{
+  margin: 14px;
+}
+._padding{
+  padding: 14px;
+}
+
+._gap{
+  gap: 14px
+}
+._gap6px {
+  gap: 16px
+}
+
+.marginBottom_4px{
+  margin-bottom: 4px;
+}
+.marginTop_4px{
+  margin-top: 4px;
+}
+.marginLeft_4px{
+  margin-left: 4px;
+}
+.marginRight_4px{
+  margin-right: 4px;
+}
+.margin_4px{
+  margin: 4px;
+}
+
+/* ============ Rounded corner ================ */
+
+.rounded_primary{
+  border-radius: 8px;
+}
+.rounded_secondary{
+  border-radius: 2px;
+}
+/* ============ flatpicker background ================ */
+.flatpickr-months .flatpickr-month{
+  
+  background: #685DD8 !important;
+
+}   
+.flatpickr-weekdays{
+ background: #685DD8 !important;
+
+}   
+span.flatpickr-weekday{
+ background: #685DD8 !important;
+ color:white !important;
+
+} 
+.flatpickr-current-month .flatpickr-monthDropdown-months{
+ background: #685DD8 !important;
+
+}
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay{
+  background: #685DD8 !important;
+  border-color: #685DD8 !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months .flatpickr-monthDropdown-month{
+  background-color: #685DD8 !important;
+}
